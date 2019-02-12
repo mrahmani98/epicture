@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="epitech.m_rahman.epicture">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:name=".EpictureApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_app_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_app_icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data
+                    android:host="oauth"
+                    android:scheme="epicture"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".SearchActivity">
+        </activity>
+        <activity android:name=".UserImagesActivity">
+        </activity>
+        <activity android:name=".UserFavoritesActivity">
+        </activity>
+        <activity android:name=".UploadActivity">
+        </activity>
+        <activity android:name=".EditImageActivity">
+        </activity>
+        <activity android:name=".FullScreenImageActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".SplashscreenActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".DashboardActivity">
+        </activity>
+    </application>
+
+</manifest>
